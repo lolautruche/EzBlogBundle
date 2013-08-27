@@ -17,7 +17,11 @@
             </div>
             <div class="meta">
                 <span class="user"><a href="#">By LuisZuno, </a></span>
-                <span class="tags"><a href="#">red</a>, <a href="#">cyan</a>, <a href="#">white</a>, <a href="#">blue</a></span>
+                <span class="tags">
+                {% for tag in content.getFieldValue( 'tags' ).values %}
+                    <a href="#">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+                </span>
             </div>
             <i class="tape"></i>
         </article>
