@@ -8,8 +8,8 @@
 
         <article>
             <div class="feature-image">
-                <img src="{{ asset( "bundles/acmeezblog/img/dummies/560x300c.jpg" ) }}" alt="Thumbnail" />
-                <div class="entry-date"><div class="month">JAN</div><div class="number">23</div></div>
+                {#<img src="{{ asset( "bundles/acmeezblog/img/dummies/560x300c.jpg" ) }}" alt="Thumbnail" />#}
+                <div class="entry-date"><div class="month">{{ content.contentInfo.publishedDate|date( 'M' ) }}</div><div class="number">{{ content.contentInfo.publishedDate|date( 'd' ) }}</div></div>
             </div>
             <div class="excerpt">
                 <h1 class="post-heading" >{{ ez_render_field( content, 'title' ) }}</h1>
