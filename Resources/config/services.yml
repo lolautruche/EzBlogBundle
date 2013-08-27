@@ -1,5 +1,6 @@
 parameters:
-#    acme_ez_blog.example.class: Acme\EzBlogBundle\Example
+    ezpublish_legacy.ezblog.view_default_layout: 'AcmeEzBlogBundle::pagelayout.html.twig'
+    ezpublish_legacy.ezblog.module_default_layout: 'AcmeEzBlogBundle::pagelayout_legacy.html.twig'
 
 services:
 #    acme_ez_blog.example:

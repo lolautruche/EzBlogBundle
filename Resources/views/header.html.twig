@@ -1,0 +1,16 @@
+{% block header %}
+    <!-- HEADER -->
+    <header>
+
+        <!-- header wrapper -->
+        <div class="wrapper cf">
+            <div id="logo">
+                <a href="/" ><img src="{{ asset( "bundles/acmeezblog/img/logo.png" ) }}" alt="" /></a>
+            </div>
+        </div><!-- ENDS header wrapper -->
+
+        {% include "@AcmeEzBlog/nav.html.twig" %}
+
+    </header>
+    <!-- ENDS HEADER -->
+{% endblock %}
