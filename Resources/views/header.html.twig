@@ -9,7 +9,9 @@
             </div>
         </div><!-- ENDS header wrapper -->
 
-        {% include "@AcmeEzBlog/nav.html.twig" %}
+        {% block nav %}
+        {{ render_esi( controller( 'AcmeEzBlogBundle:Default:navbar' ) ) }}
+        {% endblock %}
 
     </header>
     <!-- ENDS HEADER -->

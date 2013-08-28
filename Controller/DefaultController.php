@@ -57,4 +57,26 @@ class DefaultController extends Controller
             array( 'author' => $author )
         );
     }
+
+    public function navbarAction()
+    {
+        // TODO: Make this configurable!
+        $homeLocationId = 90;
+        $contactLocationId = 97;
+
+        $response = new Response();
+        $response->setSharedMaxAge( 86400 );
+        // Bind response to home
+        $response->headers->set( 'X-Location-Id', $homeLocationId );
+        $response->setVary( 'X-User-Hash' );
+
+        return $this->render(
+            'AcmeEzBlogBundle::nav.html.twig',
+            array(
+                'homeLocationId' => $homeLocationId,
+                'contactLocationId' => $contactLocationId
+            ),
+            $response
+        );
+    }
 }

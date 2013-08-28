@@ -18,6 +18,7 @@ ezpublish:
                 # Use multisite feature and make ezblog start at location #90
                 tree_root:
                     location_id: 90
+                    excluded_uri_prefixes: ['/contact-us']
 
             # Template rules for location view
             # See https://confluence.ez.no/display/EZP/View+provider+configuration
