@@ -28,11 +28,13 @@ ezpublish:
                         match:
                             Identifier\ContentType: [blog]
                     blog_post:
+                        controller: "AcmeEzBlogBundle:Default:showBlogPost"
                         template: "AcmeEzBlogBundle:full:blog_post.html.twig"
                         match:
                             Identifier\ContentType: [blog_post]
                 line:
                     blog_post:
+                        controller: "AcmeEzBlogBundle:Default:showBlogPost"
                         template: "AcmeEzBlogBundle:line:blog_post.html.twig"
                         match:
                             Identifier\ContentType: [blog_post]

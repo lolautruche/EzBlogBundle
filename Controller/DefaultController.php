@@ -39,4 +39,21 @@ class DefaultController extends Controller
             $response
         );
     }
+
+    public function showBlogPostAction( $locationId, $viewType, $layout = false, array $params = array() )
+    {
+        // We need the author, whatever the view type is.
+        $repository = $this->getRepository();
+        $location = $repository->getLocationService()->loadLocation( $locationId );
+        $author = $repository->getUserService()->loadUser( $location->getContentInfo()->ownerId );
+
+        // Delegate view rendering to the original ViewController (makes it possible to continue using defined template rules)
+        // We just add "author" to the list of variables exposed to the final template
+        return $this->get( 'ez_content' )->viewLocation(
+            $locationId,
+            $viewType,
+            $layout,
+            array( 'author' => $author )
+        );
+    }
 }

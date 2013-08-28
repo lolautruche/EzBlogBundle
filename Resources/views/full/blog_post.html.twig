@@ -18,7 +18,7 @@
                 {{ ez_render_field( content, 'body' ) }}
             </div>
             <div class="meta">
-                <span class="user"><a href="#">By LuisZuno, </a></span>
+                <span class="user"><a href="#">By {{ author.contentInfo.name }}, </a></span>
                 <span class="tags">
                 {{ tags.commaList( content.getFieldValue( 'tags' ).values ) }}
                 </span>
