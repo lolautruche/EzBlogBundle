@@ -4,63 +4,24 @@
     <!-- posts list -->
     <div id="posts-list" class="cf">
 
+    {% for post in posts.locations %}
         <article>
             <div class="feature-image">
-                <a href="single.html" ><img src="{{ asset( "bundles/acmeezblog/img/dummies/560x300a.jpg" ) }}" alt="Thumbnail" /></a>
-                <div class="entry-date"><div class="month">JAN</div><div class="number">23</div></div>
+                <div class="entry-date"><div class="month">{{ post.contentInfo.publishedDate|date( 'M' ) }}</div><div class="number">{{ post.contentInfo.publishedDate|date( 'd' ) }}</div></div>
             </div>
             <div class="excerpt">
-                <a href="single.html" class="post-heading" >LOREM IPSUM DOLOR</a>
+                <a href="{{ path( post ) }}" class="post-heading" >LOREM IPSUM DOLOR</a>
                 <p>
                     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
                 </p>
             </div>
             <div class="meta">
                 <span class="user"><a href="#">By LuisZuno, </a></span>
-                <span class="comments">16 comments</span>
                 <span class="tags"><a href="#">red</a>, <a href="#">cyan</a>, <a href="#">white</a>, <a href="#">blue</a></span>
             </div>
             <i class="tape"></i>
         </article>
-
-        <article>
-            <div class="feature-image">
-                <a href="single.html" ><img src="{{ asset( "bundles/acmeezblog/img/dummies/560x300b.jpg" ) }}" alt="Thumbnail" /></a>
-                <div class="entry-date"><div class="month">JAN</div><div class="number">23</div></div>
-            </div>
-            <div class="excerpt">
-                <a href="single.html" class="post-heading" >LOREM IPSUM DOLOR</a>
-                <p>
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                </p>
-            </div>
-            <div class="meta">
-                <span class="user"><a href="#">By LuisZuno, </a></span>
-                <span class="comments">16 comments</span>
-                <span class="tags"><a href="#">red</a>, <a href="#">cyan</a>, <a href="#">white</a>, <a href="#">blue</a></span>
-            </div>
-            <i class="tape"></i>
-        </article>
-
-        <article>
-            <div class="feature-image">
-                <a href="single.html" ><img src="{{ asset( "bundles/acmeezblog/img/dummies/560x300c.jpg" ) }}" alt="Thumbnail" /></a>
-                <div class="entry-date"><div class="month">JAN</div><div class="number">23</div></div>
-            </div>
-            <div class="excerpt">
-                <a href="single.html" class="post-heading" >LOREM IPSUM DOLOR</a>
-                <p>
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                </p>
-            </div>
-            <div class="meta">
-                <span class="user"><a href="#">By LuisZuno, </a></span>
-                <span class="comments">16 comments</span>
-                <span class="tags"><a href="#">red</a>, <a href="#">cyan</a>, <a href="#">white</a>, <a href="#">blue</a></span>
-            </div>
-            <i class="tape"></i>
-        </article>
-
+    {% endfor %}
 
         <!-- page-navigation -->
         <div class="page-navigation cf">
