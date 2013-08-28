@@ -14,6 +14,7 @@ class DefaultController extends Controller
         $response->setSharedMaxAge( 3600 );
         // Make the response location cache aware for the reverse proxy
         $response->headers->set( 'X-Location-Id', $locationId );
+        $response->setVary( 'X-User-Hash' );
 
         $request = $this->getRequest();
         $offset = $request->query->get( 'offset', 0 );
