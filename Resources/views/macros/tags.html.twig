@@ -1,0 +1,6 @@
+{# Displays a comma separated tag list #}
+{% macro commaList( tagsList ) %}
+    {% for tag in tagsList %}
+        <a href="#">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+    {% endfor %}
+{% endmacro %}
