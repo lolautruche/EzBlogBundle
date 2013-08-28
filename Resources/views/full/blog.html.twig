@@ -5,22 +5,7 @@
     <div id="posts-list" class="cf">
 
     {% for post in posts.locations %}
-        <article>
-            <div class="feature-image">
-                <div class="entry-date"><div class="month">{{ post.contentInfo.publishedDate|date( 'M' ) }}</div><div class="number">{{ post.contentInfo.publishedDate|date( 'd' ) }}</div></div>
-            </div>
-            <div class="excerpt">
-                <a href="{{ path( post ) }}" class="post-heading" >LOREM IPSUM DOLOR</a>
-                <p>
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
-                </p>
-            </div>
-            <div class="meta">
-                <span class="user"><a href="#">By LuisZuno, </a></span>
-                <span class="tags"><a href="#">red</a>, <a href="#">cyan</a>, <a href="#">white</a>, <a href="#">blue</a></span>
-            </div>
-            <i class="tape"></i>
-        </article>
+        {{ render_esi( controller( 'ez_content:viewLocation', {'locationId': post.id, 'viewType': 'line'} ) ) }}
     {% endfor %}
 
         <!-- page-navigation -->

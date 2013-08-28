@@ -31,3 +31,8 @@ ezpublish:
                         template: "AcmeEzBlogBundle:full:blog_post.html.twig"
                         match:
                             Identifier\ContentType: [blog_post]
+                line:
+                    blog_post:
+                        template: "AcmeEzBlogBundle:line:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
