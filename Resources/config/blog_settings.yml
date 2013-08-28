@@ -39,3 +39,8 @@ ezpublish:
                         template: "AcmeEzBlogBundle:line:blog_post.html.twig"
                         match:
                             Identifier\ContentType: [blog_post]
+
+parameters:
+    # "ezsc" is the parameter namespace (e.g. your vendor or app name)
+    # "default" is the scope (can be siteaccess, siteaccess group, "default" or "global")
+    ezsc.default.contact_page.locationId: 97

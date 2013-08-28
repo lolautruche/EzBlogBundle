@@ -60,9 +60,9 @@ class DefaultController extends Controller
 
     public function navbarAction()
     {
-        // TODO: Make this configurable!
-        $homeLocationId = 90;
-        $contactLocationId = 97;
+        $configResolver = $this->getConfigResolver();
+        $homeLocationId = $configResolver->getParameter( 'content.tree_root.location_id' );
+        $contactLocationId = $configResolver->getParameter( 'contact_page.locationId', 'ezsc' );
 
         $response = new Response();
         $response->setSharedMaxAge( 86400 );
