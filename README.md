@@ -31,5 +31,5 @@ Repository showing you step by step how to create a simple blog in pure eZ Publi
      php ezpublish/console cache:clear
     ```
 
-7. Finally, Go to your application root path/ `web/index_dev.php/ezblog`
+7. Finally, Go to `web/index_dev.php/ezblog`
 
